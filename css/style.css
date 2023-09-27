@@ -1,0 +1,821 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 81, 176);
+    height: calc(4vh + 4vw);
+    width: 100%;
+    position: fixed;
+}
+
+nav{
+    width: 100%;
+}
+
+.enlace{
+    top: 0px;
+    margin-left: calc(3vh + 3vw);
+    position: absolute;
+    padding: calc(2vh + 1vw);
+    background-color: rgb(0, 81, 176);
+    border-radius: 0 0 20% 20%;
+    z-index: 1;    
+}
+
+.logo{
+    height: calc(7vh + 7vw);    
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px; 
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: calc(.85vh + .85vw);
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;   
+}
+
+li a.active, li a:hover{
+    background: blue;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*----      INICIO : WHATSAPP       ----*/
+ul li img {
+    height: 4em;
+}
+
+.check-btn {
+    display: none;    
+    color: #fff;
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#check {
+    display: none;
+}
+
+.contacto_W {
+    display: flex;  
+    position: fixed;  
+    align-items: flex-end;                     
+    width: fit-content;       
+    float: right;
+    flex-direction: column-reverse;    
+    z-index: 2;    
+    bottom: 4%;
+    right: 3%;        
+}
+
+.contacto_W ul {
+    width: 0;
+    height: 0;
+    display: flex;
+    background-color: rgb(7, 209, 0);            
+    flex-direction: column;     
+    padding: 1em;        
+    margin-right: 40px;  
+    transform: scale(0);            
+    transform-origin: bottom right;
+    border-radius:  1em 1em  0% 1em;
+    box-shadow: 0px 0px 15px black;            
+}
+
+.contacto_W ul li {    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+
+    padding-top: 4px;            
+    padding-bottom: 4px;  
+}
+   
+.contacto_W a{            
+    width: 80%;
+    font-size:  calc(2.2vh + .1vw);
+    color: white;
+
+    text-decoration: none; 
+}
+
+.numero-W {
+    background-color:orangered;
+    font-size:  calc(2.2vh + .1vw);
+    color: white;
+    padding: 8px;
+    border-radius:  1em;
+}
+
+li a img {
+    width: 2vh;
+    height: 2vh;
+    margin-right:5px ;
+}
+
+.contacto_W a:hover {
+    color: gold;
+}
+
+.listaWatsap{
+    font-size: calc(2.2vh + .1vw);    
+}
+
+.contacto_btn {
+    background-color: rgb(5, 196, 5);
+    padding: .15em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: right;    
+    font-size: calc(4.3vh + 1vw);
+    color: white;    
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px black;
+}
+
+#contacto_Check {
+    display: none;
+}
+
+#contacto_Check:checked ~ ul {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: bottom right;
+    width: fit-content;
+    height: fit-content;
+}
+/*----      FIN : WHATSAPP       ----*/
+
+.fondo {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url(../img/portada.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.fondoDestino {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    background: url(../img/portada.jpg);
+    background-position: center;
+    background-size: cover;    
+    box-shadow: 0px 0.1em 1em 1px rgb(0 0 0 / 57%)
+}
+
+.flexContainer{    
+    float: left;    
+    margin-left: calc(4vh + 1vw); 
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    gap: 10px;
+    margin-top: calc(4vh + 4vw);    
+}
+
+.flexContainerdestino{    
+    float: left;    
+    margin-left: 5vw;    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    gap: 10px;
+    margin-top: calc(4vh + 4vw);    
+}
+
+.tituloContainer {
+    flex-basis: 100%;
+}
+
+.titulo{
+    text-shadow: 2px 2px 2px rgb(0, 81, 176);
+    text-align: center;
+    width: 100%;
+    line-height: 1em;    
+    color: white;
+    font-size: calc(8vh + 2vw);
+    font-weight:900;    
+}
+
+.tituloDestinos{
+    text-shadow: 2px 2px 2px rgb(0, 81, 176);
+    text-align: left;    
+    width: 100%;
+    line-height: 1em;    
+    color: white;
+    font-size: calc(8vh + 2vw);
+    font-weight:900;    
+    margin-top: calc(13vh + 5.5vw);
+    padding-bottom: 1vh;
+}
+
+.btnDestinos{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 58, 0);
+    padding: calc(.5em + 0.5vw) calc(1.5em + 1vw) calc(.5em + 0.5vw) calc(1.5em + 1vw);
+    border-radius: 2em;
+    color: white;
+    width: fit-content;
+}   
+
+.btnDestinos h2 {
+    font-size: calc(1.3vh + 1vw);
+}
+
+.btnPromociones{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(196, 196, 196);
+    padding: calc(.5em + 0.5vw) calc(1.5em + 1vw) calc(.5em + 0.5vw) calc(1.5em + 1vw);
+    border-radius: 2em;
+    color: white;
+    width: fit-content;
+}
+
+.btnPromociones h2 {
+    font-size: calc(1.3vh + 1vw);
+}
+
+
+/*----      DESTINO SUBTITULOS      ----*/
+.destinosSubtitulos {
+    padding: calc(1.3vh + 1vw) calc(2vh + 2vw) 0 calc(1.3vh + 1vw);
+}
+
+.destinosSubtitulos h2 {
+    color: rgb(0, 81, 176);
+    text-align: right;
+    font-weight:500; 
+}
+
+/*----      DESTINO GRID        ----*/
+.gridDestinos {
+    padding: calc(2vh + 2vw);
+    display: grid;
+    gap: calc(1.3vh + 1vw);
+    grid-auto-rows: calc(30vh + 12vw);
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.destinosTarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1em;
+    background-image: url(../img/Tingo-Maria-web.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1em;
+    box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.33);
+}
+
+.destinosTarjetas-ballena {
+    background-image: url(../img/avistamientoballena.jpg);
+}
+
+.destinosTarjetas-nado {
+    background-image: url(../img/nadotortuga.jpg);
+}
+
+.destinosTarjetas-manglares {
+    background-image: url(../img/manglares.jpg);
+}
+
+.destinosTarjetas-peroles {
+    background-image: url(../img/peroles.jpg);
+}
+
+.destinosTarjetas a {
+    text-align: center;
+    width: calc(100% - 1em);
+    color: white;
+    background-color: orangered;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: .5em;
+}
+
+.destinosTarjetas a:hover{
+    background-color: rgb(15, 72, 230);    
+    transition: .5s;
+}
+
+/*----      PROMOCIONES GRID        ----*/
+.seccionPromociones{
+    padding: calc(2vh + 2vw);
+}
+
+.gridPromociones{    
+    margin-bottom: calc(2vh + 2vw);
+    padding: calc(2vh + 2vw);
+    display: grid;
+    gap: calc(1.5vh + 1vw);
+    grid-template-rows: minmax(calc(20vh + 10vw), auto);
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    background-color: rgb(0, 81, 176);
+    border-radius: 1em;
+}
+
+.imgPromocion1{
+    background-image: url(../img/Tingo-Maria-web.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1em;
+}
+
+.caracteristicasPromocion1{
+    display: grid;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: auto;
+}
+
+.tituloPromocion{
+    font-size: calc(4vh + 1.5vw);
+    line-height: .9em;
+    color: white;
+    font-weight:500; 
+}
+.parrafoPromocion{
+    font-size: calc(2.2vh + .1vw);
+    color: white;
+}
+
+.precioPromocion{    
+    font-size: calc(3vh + .2vw);
+    width: calc(100% - 1em);
+    color: white;
+    background-color: orangered;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: .5em;
+    font-weight:700; 
+}
+
+/*----      CARACTERISTICAS DESTINO     ----*/
+.informacionDestino{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: calc(2vh + 2vw);    
+    gap: calc(1.5vh + 1vw);
+    grid-template-rows: minmax(calc(20vh + 10vw), auto);
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.duracionYotros{
+    font-size: calc(2.2vh + .5vw);
+}
+
+.reserva{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    width: 75%;
+    height: fit-content;
+    flex-direction: column;
+    border-radius: 1.5em;
+    background-color:rgb(0, 81, 176);    
+    font-size: calc(3vh + .1vw);
+    color: white;
+}
+
+.reserva h3{
+    font-size: calc(5vh + 1vw);
+    font-weight: 900;
+}
+
+.reservaBtn{
+    margin-top: .5em;
+    text-align: center;
+    font-size: calc(3vh + .2vw);
+    width: 100%;
+    color: white;
+    background-color: orangered;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: .5em;
+    font-weight:700; 
+}
+
+.itinerario{
+    background-color: rgb(0, 81, 176);
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: calc(2vh + 2vw);
+    gap: calc(1.5vh + 1vw);
+    grid-template-rows: minmax(calc(20vh + 10vw), auto);
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    list-style: square inside;
+}
+
+.itinerarioFoto-tingo img{
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1em;
+}
+
+.itinerarioTexto {
+    font-size: calc(2.2vh + .5vw);    
+}
+
+.gridFotosLugar{
+    display: grid;
+    padding: calc(2vh + 2vw);    
+    gap: calc(1.5vh + 1vw);
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: minmax(calc(20vh + 10vw), auto);
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.gridFotosLugar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1em;
+}
+
+/*----      SERVICIOS       ----*/
+.tarjetasServicios{    
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-auto-rows: minmax(25em, auto);
+    grid-template-columns: repeat(2, 1fr);   
+}
+
+.tarjetaUnidad{
+    padding: calc(2vh + 2vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;    
+    background-image:linear-gradient(rgba(0, 0, 90, 0.4), rgba(0, 0, 90, 0.4)),url(../img/1200px-Montaña00.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.tarjetaunidad-transporte {
+    background-image:linear-gradient(rgba(0, 0, 90, 0.4), rgba(0, 0, 90, 0.4)),url(../img/transporte.jpg);
+}
+
+.tarjetaUnidad-tour {
+    background-image:linear-gradient(rgba(0, 0, 90, 0.4), rgba(0, 0, 90, 0.4)),url(../img/tour.jpg);
+}
+
+.tarjetaUnidad-guia {
+    background-image:linear-gradient(rgba(0, 0, 90, 0.4), rgba(0, 0, 90, 0.4)),url(../img/guia.jpg);
+}
+
+.tarjetaUnidad-hospedaje {
+    background-image:linear-gradient(rgba(0, 0, 90, 0.4), rgba(0, 0, 90, 0.4)),url(../img/hospedaje.jpg);
+}
+
+
+.textoServicios{
+    font-size:  calc(2.4vh + .1vw);
+    font-weight: 100;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+.textoServicios h2{
+    font-size:  calc(3vh + 1vw);
+    font-weight: 900;
+}
+
+
+/*----      NOSOTROS        ----*/
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros p{
+    font-size: calc(2vh + .1vw); 
+    text-align: justify;
+}
+
+.nosotros h2{
+    padding: 1em;
+    font-size: calc(3vh + .2vw);   
+    font-weight: 900;    
+}
+
+.quienesSomos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(2vh + 5vw);
+}
+
+.quienesSomosTexto{
+    text-align: center;
+    width: 80%;
+}
+
+.objetivos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.objetivos ul{
+    font-size: calc(2vh + .1vw); 
+    text-align: justify;
+    }
+
+.objetivosTarjetas{
+    display: grid;
+    width: 80%;
+    padding: calc(2vh + 5vw) calc(2vh + 2vw) calc(2vh + 5vw) calc(2vh + 2vw);
+    gap: calc(2vh + 2vw);;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.valoresImg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    object-position: center;
+    border-radius: 2em;
+}
+
+/*----      TERMINOS        ----*/
+.terminosYcondiciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    font-size: calc(2vh + .1vw);
+}
+
+.terminosYcondiciones h3{
+    text-align: center;
+    padding: 1em;
+    font-size: calc(3vh + .2vw);   
+    font-weight: 900; 
+}
+
+.terminosTexto{
+    padding: calc(2vh + 2vw);
+    width: 80%;
+}
+
+/*----      FOOTER      ----*/
+footer{
+    background-color: rgb(0, 81, 176);
+    font-size: calc(1.6vh + .5vw);    
+    padding: calc(2vh + 2vw);    
+    color: white;
+}
+
+.terminosYredes{
+    display: grid;   
+    margin-bottom: calc(1.5vh + 1vw); ;
+    align-items: center;     
+    text-align: center;
+    gap: calc(1.5vh + 1vw);    
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.terminosFooter{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+
+}
+
+h4{
+    font-weight: 100;
+    color: white;
+}
+
+.siguenosEn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+
+.siguenosEn img{
+    width: 3em;
+}
+
+.derechosReservados{
+    display: flex;    
+    gap: calc(2vh + 2vw);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineaDerechosreservados{
+    background: white;
+    width: 100%;
+    height: .2em;
+}
+
+/*----      MEDIAS      ----*/
+@media (min-width:1440px) {
+    .destinosSubtitulos h2 {        
+        font-size: calc(1.4vh + 1.4vw);
+    }
+
+    .gridDestinos {
+        grid-template-columns: repeat(auto-fill, minmax(28em, 1fr));
+    }
+
+    .destinosTarjetas h3 {
+        font-size: calc(1vh + 1vw);
+    }
+
+    /*----      PROMOCIONES GRID        ----*/
+    .tituloPromocion{
+        font-size: calc(3vh + 2vw);
+    }
+}
+
+/*----      MEDIAS      ----*/
+@media (max-width:1024px) {
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    .gridDestinos {
+        grid-auto-rows: calc(40vh + 15vw);
+    }
+}
+
+/*----      MEDIAS      ----*/
+@media (max-width:858px) {
+    .logo{
+        height: calc(12vh + 4vw);        
+    }
+
+    .checkbtn{
+        display: block;    
+    }
+
+    header nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: orange;
+        top: calc(4vh + 4vw);
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    #marginInicio{
+       margin-top: 0px;
+    }
+
+    nav ul li{
+        display: block;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+}
+
+/*----      MEDIAS      ----*/
+@media (max-width:700px) {
+    .flexContainerdestino{            
+        margin-left: 0vw;  
+    }
+
+    header{
+        height: calc(9vh + 3vw);
+    }
+
+       header nav ul{        
+        top: calc(9vh + 3vw);
+    }
+    
+    .tituloDestinos {
+        text-align: center;          
+    }
+
+    .tituloDestinos{       
+        font-size: calc(5.5vh + 1vw);        
+    }
+}
+
+/*----      MEDIAS      ----*/
+@media (max-width:560px) {
+    .flexContainer{
+        margin-left: 0vw;    
+        float: left;
+        width: 100%;        
+    }
+
+    .titulo{
+        font-size: calc(7vh + 2vw);
+    }
+
+    .btnDestinos{
+        flex-basis: 70%;        
+    }
+
+    .btnDestinos h2 {
+        font-size: calc(2vh + 2vw);
+    }
+
+    .btnPromociones{
+        flex-basis: 70%;
+    }
+
+    .btnPromociones h2 {
+        font-size: calc(2vh + 2vw);
+    }
+
+    .tarjetasServicios{            
+        grid-template-columns: repeat(1, 1fr);   
+    }
+}
